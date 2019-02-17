@@ -1,0 +1,91 @@
+$primary: #a4c029;
+$contraste: rgb(5, 104, 5);;
+$white: #FFF;
+$black: #000;
+$background-color: #F3F3F3;
+$title-color: #696969;
+
+
+
+$link-color: $primary;
+$border-test: hsl(120, 50%, 50%);
+
+// @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import "_basics.scss";
+@import "_mediaqueries.sass"; 
+@import "_mixins.scss";  
+@import "_dev.scss";
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+  //@include dev-mode(lime); 
+}
+.body{
+  background-color: $background-color;
+}
+header{
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.brand{
+  @include mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.mobile-button{
+  @include mobile {
+    width: 2rem;
+    height: 2rem;
+    background-color: orange;
+    border-radius:50%;
+  }
+  @include from($tablet){
+    display: none;
+  }
+}
+.main-nav{
+  display: flex;
+  @include until($tablet){
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    flex-direction: column;
+    background-color: $white;
+    width: 100vw;
+  }
+  @include from($tablet){
+    flex-direction: row;
+  }
+  &.is-active{
+    top: 5rem;
+  }
+  a.nav-item{
+    color: $primary;
+    padding: 1rem;
+    @include until($tablet){
+      border-bottom: 1px solid rgba($black, 0.12);
+      padding-left: 2rem;
+    }
+  }
+}
+.box{
+  background-color: #FFF;
+  padding: 1rem;
+  border-radius: 1rem;
+  min-height: 19rem;
+}
+
+// Extend/Inheritance
+%dev-guides{
+  border-color:$border-test;
+  border-style: dashed;
+  border-width: 1px;
+}

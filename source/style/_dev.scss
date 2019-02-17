@@ -1,0 +1,17 @@
+body.dev{
+  @include mobile {
+    background-color:blue;;
+  }
+  @include tablet {
+    background-color: green;
+  }
+  @include desktop {
+    background-color: red;
+  }
+  @include widescreen {
+    background-color: yellow;
+  }
+  @include fullhd{
+    background-color: black;
+  }
+}

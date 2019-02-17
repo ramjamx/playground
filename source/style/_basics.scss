@@ -1,0 +1,19 @@
+p, a, li, 
+.title, .has-text{
+  font-family: 'Roboto', sans-serif;
+}
+h1.title, 
+h2.title,
+h3.title,{
+  font-weight: bolder;
+  color: $title-color;
+}
+a.link {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $contraste;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,5 @@
+@mixin dev-mode($color){
+  border-color:$color;
+  border-style: dashed;
+  border-width: 1px;
+}
