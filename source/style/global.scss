@@ -4,6 +4,7 @@ $white: #FFF;
 $black: #000;
 $background-color: #F3F3F3;
 $title-color: #696969;
+$brand: #ADA334;
 
 
 
@@ -31,6 +32,7 @@ header{
     justify-content: space-between;
     align-items: center;
   }
+ 
 }
 .brand{
   @include mobile {
@@ -38,6 +40,10 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .logo{
+    width: 18rem; 
+    height: 10rem;
   }
 }
 .mobile-button{
